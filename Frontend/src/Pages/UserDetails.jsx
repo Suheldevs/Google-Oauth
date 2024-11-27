@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { FaPencilAlt } from "react-icons/fa"; // Import Pencil Icon
+import { FaGithub, FaPencilAlt } from "react-icons/fa"; // Import Pencil Icon
 import { Button } from "flowbite-react";
 import { useNavigate } from "react-router-dom";
 function UserDetails() {
@@ -152,6 +152,7 @@ console.log(userData.image)
                         <Button color="dark" onClick={onChangeAccount} className="w-full">Change Account</Button>
                     </div>
                     <div className="mt-10 text-gray-400 text-center">If you sign-in with google, See console for full details of you by Google-Provider</div>
+                <div className="flex justify-center mt-4"><a href="https://github.com/Suheldevs/Google-Oauth" target="blank"><FaGithub/></a> </div>
                 </div>
             </div>
         </div>
