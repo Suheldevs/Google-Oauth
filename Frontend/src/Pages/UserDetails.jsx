@@ -9,7 +9,7 @@ function UserDetails() {
     const initialData = location.state || {};
     const [userData, setUserData] = useState(initialData); // State for user details
     const [editingField, setEditingField] = useState(null); // Track which field is being edited
-
+console.log(userData.image)
     // Function to handle image change
     const handleImageChange = (e) => {
         setEditingField(null); // Close editing mode
@@ -42,11 +42,11 @@ function UserDetails() {
                     <img
                         src={userData.image}
                         alt="User"
-                        className="w-32 h-32 rounded-full shadow-lg object-cover"
+                        className="w-36 h-36 rounded-full shadow-lg object-cover hover:scale-110 bg-slate-50 border-4 border-black p-2"
                     />
                     <button
                         onClick={() => setEditingField("image")}
-                        className="absolute bottom-2 right-2 bg-gray-800 text-white p-2 rounded-full shadow hover:bg-gray-700"
+                        className="absolute bottom-[-15px] align-middle bg-gray-800 text-white p-2 rounded-full shadow hover:bg-gray-700"
                     >
                         <FaPencilAlt />
                     </button>
@@ -151,6 +151,7 @@ function UserDetails() {
                         </button>
                         <Button color="dark" onClick={onChangeAccount} className="w-full">Change Account</Button>
                     </div>
+                    <div className="mt-10 text-gray-400 text-center">If you sign-in with google, See console for full details of you by Google-Provider</div>
                 </div>
             </div>
         </div>
